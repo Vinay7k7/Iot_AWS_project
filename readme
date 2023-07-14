@@ -13,11 +13,18 @@ to the aws!!!
         in that wee will give 
 
                         { "SELECT *,timestamp() as ts FROM 'Safety_Monitoring/Topic01' 
-                                                  where water_pressure > 65 or fire > 335 or air_pressure > 800" }
+                                                                     where water_pressure > 65 or fire > 335 or air_pressure > 800" }
 
 
 
       In this above you need to replace the iot topic u have created and your  thresholds ⚟ 
+
+
+5)--> While i am creating the rule i need to mention the service that i need to connect in this case i am connecting the Lambda and from there on to the 
+      SNS and in lambda we need to write the scrip that formates the data and can do somthing operational too.
+
+
+            
 
 
 
