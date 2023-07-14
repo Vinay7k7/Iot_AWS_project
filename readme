@@ -21,7 +21,35 @@ to the aws!!!
 
 
 5)--> While i am creating the rule i need to mention the service that i need to connect in this case i am connecting the Lambda and from there on to the 
-      SNS and in lambda we need to write the scrip that formates the data and can do somthing operational too.
+      SNS and in lambda we need to write the scrip that formates the data and can do somthing operational too.⚡
+
+6)--> In the destination we can place the sns that you have created and there on the user will get the notification 🔔 to the user
+      and also in other hand we need to store the data (triggerd data) in to the DynamoDB.
+7)--> In the third part in need to monamonitor nd visualize the every data appart from if it is triggered or not as it is a different part we need to 
+      create a different iot_rule where the sql query should be
+
+
+
+                  {" SELECT water_pressure,fire,air_pressure,room,floor FROM 'Safety_Monitoring/Topic01' "}
+
+
+
+8)--> this rule creation we need to add the action as the timestream because it is live data storage service in aws and easy to use and easy to view the
+      Data in that.
+9)--> From there on we will create the AWS_grefana workspace and add the user in the workspace and don't forgot to make that user as the admin and also you
+      need to add the respective polices for that user to access the grefana.
+10)--> In the created grafana workspace we can ad the data service that we need to monitor in this case we are using the timestream so we will create
+      and connect the timestream databasse and table we want to monitor in the grefana 
+11)--> At last we need to run the simulator code then the generated json formated data would go the aws client (mqtt) from there it goes to the iot rules
+      from there on it go's to the iot_rule_Of_Lambda where the data is filtered by the query and it sends the filtered the data to the lambda for the
+      formating and to perform the conditions in the data
+12)--> In other hand the json data from mqtt client to the timestream for the live storage and forther to stream in the grafana.
+
+
+
+
+
+                        For this project you can refer the video {"https://www.youtube.com/live/Byik_DSPymA?feature=share"}
 
 
             
