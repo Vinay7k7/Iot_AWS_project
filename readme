@@ -2,3 +2,23 @@
 to the aws!!!
 
 
+1)--> i will create a thing in the aws iot core and i would downlode the required certificate , private and public and CA1.pam files
+      in order to register the iot device in my case for the simulator code in the place of actual iot device.
+2)--> then i will create aws mqtt client to make pipeline of communaction with the code to the aws client endpoint after that i wil make a connection 
+      with the aws client.
+3)--> then based on the architecture (aws) we need to create a connection between the aws-iot to the lambda for the formating and for the performing
+      threshold operations in our project and also we intended to use lambda in our project and in lambda we have written a pyhon script that will
+      formate the incoming plain onld json formated data and converts that json into customized message and send it to the sns.
+4)--> While we are creating the iot rule we need to specify the what data that we need to send the Lambda for that we are using the iot rule sql query
+        in that wee will give 
+
+                        { "SELECT *,timestamp() as ts FROM 'Safety_Monitoring/Topic01' 
+                                                  where water_pressure > 65 or fire > 335 or air_pressure > 800" }
+
+
+
+      In this above you need to replace the iot topic u have created and your  thresholds ⚟ 
+
+
+
+
